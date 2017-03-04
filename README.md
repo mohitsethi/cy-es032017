@@ -38,7 +38,7 @@
       - increase max_map_count, run command: `sysctl -w vm.max_map_count=262144`
 
       - install plugins
-        - hq: http://www.elastichq.org/
+        - hq: http://www.elastichq.org/, https://github.com/royrusso/elasticsearch-HQ
         - head: https://github.com/mobz/elasticsearch-head
         - kopf: https://github.com/lmenezes/elasticsearch-kopf
 
