@@ -4,8 +4,8 @@
 # Elasticsearch
   - Home: https://www.elastic.co/
   - Download home: https://www.elastic.co/downloads/elasticsearch
-  - Elasticsearch version: 5.1.2
-    - tar_url: https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.1.2.tar.gz
+  - Elasticsearch version: 2.4.4
+    - tar_url: https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/tar/elasticsearch/2.4.4/elasticsearch-2.4.4.tar.gz
 
   - Cluster:
     - Node1: 24
@@ -20,20 +20,25 @@
     - validate if java8 is installed??
         `ssh -v ubuntu@<ip> < 'javac -version'`
     - get installer tarball
-      - wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.1.2.tar.gz
+      - wget https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/tar/elasticsearch/2.4.4/elasticsearch-2.4.4.tar.gz
 
     - setup node
       - directory: `mkdir -p /opt/elasticsearch`
-      - `cp ~ubuntu/elasticsearch-5.1.2.tar.gz  /opt/elasticsearch/`
+      - `cp ~ubuntu/elasticsearch-2.4.4.tar.gz  /opt/elasticsearch/`
       - extract tarball in `/opt/elasticsearch`
         ```
-        tar xvzf elasticsearch-5.1.2.tar.gz
+        tar xvzf elasticsearch-2.4.4.tar.gz
         ```
       - alternatives: https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html
       - setup user `useradd elastic`
       - setup permissions ` chown -Rvf elastic:elastic /opt/elasticsearch/`
-      - open `vim config/elasticsearch.yml'
+      - open elasticsearch.yml `vim config/elasticsearch.yml'
         - change `network.host: 0.0.0.0`
 
-      - increase max_map_count: `sysctl -w vm.max_map_count=262144`
-      
+      - increase max_map_count, run command: `sysctl -w vm.max_map_count=262144`
+
+      - install plugins
+        - hq: http://www.elastichq.org/
+        - head: https://github.com/mobz/elasticsearch-head
+        - kopf: https://github.com/lmenezes/elasticsearch-kopf
+
