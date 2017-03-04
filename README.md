@@ -8,9 +8,9 @@
     - tar_url: https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.2.2.tar.gz
 
   - Cluster:
-    - Node1: 69
+    - Node1: 24
       tags:
-    - Node2: 209
+    - Node2: 105
       tags:
 
   - Install cluster
@@ -29,3 +29,5 @@
         ```
         tar xvzf elasticsearch-5.2.2.tar.gz
         ```
+      - alternatives: https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html
+      
