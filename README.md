@@ -42,3 +42,5 @@
         - head: https://github.com/mobz/elasticsearch-head
         - kopf: https://github.com/lmenezes/elasticsearch-kopf
 
+      - add node to cluster
+        - 
