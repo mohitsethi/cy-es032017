@@ -15,4 +15,7 @@
 
   - Install cluster
     - update cache: sudo apt-get update -y
-    - install java8: ssh -v ubuntu@<ip> < scripts/install_java8.sh
+    - install java8
+      `ssh -v ubuntu@<ip> < scripts/install_java8.sh`
+    - validate if java8 is installed??
+        `ssh -v ubuntu@<ip> < 'javac -version'`
