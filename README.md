@@ -32,3 +32,8 @@
       - alternatives: https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html
       - setup user `useradd elastic`
       - setup permissions ` chown -Rvf elastic:elastic /opt/elasticsearch/`
+      - open `vim config/elasticsearch.yml'
+        - change `network.host: 0.0.0.0`
+
+      - increase max_map_count: `sysctl -w vm.max_map_count=262144`
+      
