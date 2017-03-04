@@ -19,3 +19,13 @@
       `ssh -v ubuntu@<ip> < scripts/install_java8.sh`
     - validate if java8 is installed??
         `ssh -v ubuntu@<ip> < 'javac -version'`
+    - get installer tarball
+      - wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.2.2.tar.gz
+
+    - setup node
+      - directory: `mkdir -p /opt/elasticsearch`
+      - `cp ~ubuntu/elasticsearch-5.2.2.tar.gz  /opt/elasticsearch/`
+      - extract tarball in `/opt/elasticsearch`
+        ```
+        tar xvzf elasticsearch-5.2.2.tar.gz
+        ```
