@@ -119,3 +119,6 @@
     - https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-match-query-phrase.html
     - custom analyzers: https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-custom-analyzer.html
     
+
+  - Cheat sheet: http://elasticsearch-cheatsheet.jolicode.com/
+
