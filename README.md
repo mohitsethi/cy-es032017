@@ -51,3 +51,14 @@
           discovery.zen.ping.unicast.hosts: ["<node-1>","<node-2>", "<node-3>"]
           discovery.zen.ping.multicast.enabled:  false
         ```
+
+  - Maintaining your cluster
+    - Curator: https://github.com/elastic/curator
+
+  - Install Kibana
+    - version: 4.6.4
+    - installer_url:
+      - debian/ubuntu: https://download.elastic.co/kibana/kibana/kibana-4.6.4-amd64.deb
+      - redhat/centos: https://download.elastic.co/kibana/kibana/kibana-4.6.4-x86_64.rpm
+      - tar_url: https://download.elastic.co/kibana/kibana/kibana-4.6.4-linux-x86_64.tar.gz
+      
