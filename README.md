@@ -61,4 +61,39 @@
       - debian/ubuntu: https://download.elastic.co/kibana/kibana/kibana-4.6.4-amd64.deb
       - redhat/centos: https://download.elastic.co/kibana/kibana/kibana-4.6.4-x86_64.rpm
       - tar_url: https://download.elastic.co/kibana/kibana/kibana-4.6.4-linux-x86_64.tar.gz
-      
+
+    - steps
+      - step1: `mkdir -p /opt/kibana`
+      - step2: `wget https://download.elastic.co/kibana/kibana/kibana-4.6.4-linux-x86_64.tar.gz`
+      - step3: `tar xvzf kibana-4.6.4-linux-x86_64.tar.gz`
+      - step4: `cd kibana-4.6.4-linux-x86_64`
+      - step5: `bin/kibana`
+      - step6: browse to `http://<ip>:5601
+
+  - Beats platform
+    - platform_url: https://www.elastic.co/products/beats
+    - topbeat
+      - installer_url: https://artifacts.elastic.co/downloads/beats/heartbeat/heartbeat-5.2.2-amd64.deb
+      - installation steps
+        - step1: `mkdir -p /opt/beats'
+        - step2: `wget https://artifacts.elastic.co/downloads/beats/heartbeat/heartbeat-5.2.2-amd64.deb`
+        - step3: `cd /opt/beats`
+        - step4: `dpkg -i heartbeat-5.2.2-amd64.deb`
+    - packetbeat
+    - filebeat
+      - installer_url: https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-5.2.2-amd64.deb
+      - installation steps:
+        - step1: `mkdir -p /opt/beats'
+        - step2: `wget https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-5.2.2-amd64.deb`
+        - step3: `dpkg -i filebeat-5.2.2-amd64.deb`
+        - step4: `service filbeat restart`
+    - packetbeat
+      - installer_url: https://artifacts.elastic.co/downloads/beats/packetbeat/packetbeat-5.2.2-amd64.deb
+      - installation steps:
+        - step1: `mkdir -p /opt/beats'
+        - step2: `wget https://artifacts.elastic.co/downloads/beats/packetbeat/packetbeat-5.2.2-amd64.deb`
+        - step3: `dpkg -i packetbeat-5.2.2-amd64.deb`
+        - step4: `service packetbeat restart`
+
+
+    - libbeat
