@@ -96,4 +96,26 @@
         - step4: `service packetbeat restart`
 
 
-    - libbeat
+    - Alert & Notification
+      - Elastalert: https://github.com/Yelp/elastalert
+
+    - Marvel
+      - url: https://www.elastic.co/downloads/marvel
+      - installation instructions(on all es nodes)
+        - step1: `bin/plugin install license`
+        - step2: `bin/plugin install marvel-agent`
+      - marvel kibana plugin(on kibana node)
+        - step1: `bin/kibana plugin --install elasticsearch/marvel/latest`
+
+  - Elasticsearch Exporter(backup & restore)
+    - github_url: https://github.com/mallocator/Elasticsearch-Exporter
+
+  - Query
+    - Search APIs
+      - Chrome plugins: `Sense`
+  - DSL Clients
+    - url: https://github.com/elastic?utf8=%E2%9C%93&q=client&type=&language=
+  - Analyzers:
+    - https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-match-query-phrase.html
+    - custom analyzers: https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-custom-analyzer.html
+    

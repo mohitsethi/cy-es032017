@@ -1,0 +1,23 @@
+{
+    "settings": {
+        "index": {
+            "number_of_shards": 5,
+            "number_of_replicas": 1
+        }
+    },
+    "mappings": {
+        "kb_article": {
+            "properties": {
+                "article_name": {
+                    "type": "string"
+                },
+                "article_text": {
+                    "type": "string"
+                },
+                "article_date": {
+                    "type": "date"
+                }
+            }
+        }
+    }
+}

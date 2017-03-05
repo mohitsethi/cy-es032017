@@ -1,0 +1,5 @@
+pip
+nbconvert
+jupyter
+jupyterlab
+ipython-elasticsearch

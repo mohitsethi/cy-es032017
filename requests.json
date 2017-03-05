@@ -1,0 +1,248 @@
+{
+    "query": {
+        "bool": {
+            "must": {
+                "query_string": {
+                    "query": "some query string here"
+                }
+            },
+            "filter": {
+                "term": { "user": "kimchy" }
+            }
+        }
+    }
+}
+
+
+{
+    "query": {
+        "bool": {
+            "filter": {
+                "term": { "article_name": "Torsemide" }
+            }
+        }
+    }
+}
+
+
+{
+    "query": {
+        "term": { "article_name": "Torsemide" }
+    }
+}
+
+
+
+{
+    "from": 0,
+    "size": 10,
+    "query": {
+        "bool": {
+            "must": {
+                "query_string": {
+                    "query": "Torsemide"
+                }
+            },
+            "filter": {
+                "term": { "article_name": "Torsemide" }
+            }
+        }
+    }
+}
+
+
+{
+    "from": 0,
+    "size": 10,
+    "query": {
+        "bool": {
+            "must": {
+                "query_string": {
+                    "query": "Torsemide"
+                }
+            }
+        }
+    }
+}
+
+
+{
+    "from": 0,
+    "size": 10,
+    "query": {
+        "bool": {
+            "must": {
+                "query_string": {
+                    "query": "Torsemide"
+                }
+            }
+        }
+    }
+}
+
+
+
+{
+    "from": 0,
+    "size": 10,
+    "query": {
+        "bool": {
+            "must": {
+                "query_string": {
+                    "query": "gravis"
+                }
+            },
+            "filter": {
+                "term": { "article_name": "Torsemide1" }
+            }
+        }
+    }
+}
+
+
+{
+    "from": 0,
+    "size": 10,
+    "query": {
+        "bool": {
+            "must": {
+                "query_string": {
+                    "query": "Gravis Myasthenia1 Torsemide1"
+
+                }
+            }
+        }
+    }
+}
+
+
+
+
+{
+    "from": 0,
+    "size": 10,
+    "query": {
+        "bool": {
+            "must": {
+                "query_string": {
+                    "query": "gravis"
+                },
+                "term": { "article_name": "Torsemide" }
+            }
+        }
+    }
+}
+
+
+
+{
+    "terms": {
+        "price": [20, 30]
+    }
+}
+
+{
+    "term": { "article_name": "Torsemide" }
+
+}
+
+
+
+{
+    "query": {
+        "term": {
+            "article_name": "Torsemide1"
+        }
+    }
+}
+
+
+{
+    "query": {
+        "constant_score": {
+            "filter": {
+                "terms": {
+                    "article_name": "Torsemide1"
+                }
+            }
+        }
+    }
+}
+
+
+{
+    "query": {
+        "match": {
+            "article_name": "Torsemide"
+        }
+    }
+}
+
+
+
+{
+    "query": {
+        "range": {
+            "price": {
+                "gte": 10
+            }
+        }
+    }
+}
+
+
+
+{
+    "query": {
+        "match": {
+            "title": "QUICK!"
+        }
+    }
+}
+
+
+
+{
+    "query": {
+        "match": {
+            "title": {
+                "query": "BROWN DOG!",
+                "operator": "and"
+            }
+        }
+    }
+}
+
+
+// Multi-word
+
+{
+    "size": "1002",
+    "query": {
+
+        "match": {
+            "article_text": {
+                "query": "fracture gravis",
+                "operator": "AND"
+            }
+        }
+    }
+}
+
+
+{
+    "size": "1002",
+    "query": {
+
+        "match": {
+            "article_text": {
+                "query": "fracture gravis classified undertermined",
+                "minimum_should_match": "75%"
+            }
+        }
+    }
+}
+
+
+
+
