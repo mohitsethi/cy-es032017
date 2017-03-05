@@ -43,4 +43,11 @@
         - kopf: https://github.com/lmenezes/elasticsearch-kopf
 
       - add node to cluster
+        - data node:   `node.data = true`
+        - client node: `node.client = true`
+        - master node: `node.master = true`
         - 
+        ```
+          discovery.zen.ping.unicast.hosts: ["<node-1>","<node-2>", "<node-3>"]
+          discovery.zen.ping.multicast.enabled:  false
+        ```
